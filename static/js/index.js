@@ -1,4 +1,9 @@
 
+// Cours OpenClassroom CSS
+
+// import { jsPDF } from "jspdf";
+
+
 // Fonction to get date
 // id="date-today
 // id = current-month
@@ -16,7 +21,6 @@ inputFields.forEach((input, index) => {
         const inputValue = input.value;
         previewElements[index].textContent = inputValue;
     });
-
 });
 
 
@@ -26,17 +30,24 @@ const loyerField = document.getElementById('loyer-ht-input');
 
 const chargesField = document.getElementById('charges-input');
 
-const totalField = document.getElementById('total-input');
+const totalField = document.getElementById('total-input')
+
+const totalPreview = document.getElementById('total');
 
 
 // Using global variable with totalField because the script is short
+
 
 function updateTotal() {
     const loyerValue = parseInt(loyerField.value) || 0;
     const chargesValue = parseInt(chargesField.value) || 0;
     const totalValue = loyerValue + chargesValue;
 
-    totalField.value = totalValue;
+    totalField.textContent = totalValue;
+
+    // Updating the Preview
+    totalPreview.textContent = totalValue
+
 }
 
 
@@ -45,8 +56,3 @@ chargesField.addEventListener('input', updateTotal);
 
 updateTotal();
 
-
-totalField.addEventListener('input', function () {
-    const totalValue = totalField.value;
-    console.log('change');
-})
