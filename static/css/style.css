@@ -71,7 +71,7 @@ h3 {
     width: 85%;
     height: 85%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
     border-radius: 5px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -79,6 +79,74 @@ h3 {
 
 .preview .proprio-name {
     font-size: 1em;
+    margin: auto;
     text-align: left;
     font-weight: bold;
+}
+
+.preview .proprio-name:hover {
+    color: #757575;
+    cursor: pointer;
+}
+
+.preview .proprio-address {
+    font-size: 0.8em;
+    text-align: left;
+}
+
+.preview .proprio-address:hover {
+    color: #757575;
+    cursor: pointer;
+}
+
+.preview .locataire-name {
+    font-size: 1em;
+    margin: auto;
+    text-align: right;
+    font-weight: bold;
+}
+
+.preview .locataire-name:hover {
+    color: #757575;
+    cursor: pointer;
+}
+
+.preview .locataire-address {
+    font-size: 0.8em;
+    text-align: right;
+}
+
+.preview .locataire-address:hover {
+    color: #757575;
+    cursor: pointer;
+}
+
+.preview .month {
+    margin-top: 80px;
+    margin-bottom: auto;
+    font-weight: bold;
+}
+
+.preview .date:hover {
+    color: #757575;
+    cursor: pointer;
+}
+
+.preview .periode {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.preview .periode-elem {
+    font-weight: bold;
+}
+
+.preview .periode-elem:hover {
+    color: #757575;
+    cursor: pointer;
+}
+
+.preview .calcul {
+    margin-top: 100px;
+    text-align: right;
 }
