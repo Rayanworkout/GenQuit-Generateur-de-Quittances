@@ -36,26 +36,65 @@
         <div class="row">
             <div class="col-md-4">
                 <form>
-                    <h3>Formulaire</h3>
                     <div class="input-frame">
                         <div class="row">
-                            <div class="form-group mx-auto my-form"><label for="proprio-firstname"></label>
-                                <input type="text" class="form-control" id="proprio-firstname"
-                                    placeholder="Prénom du Bailleur">
-                            </div>
-                            <div class="form-group mx-auto my-form"><label for="proprio-lastname"></label>
-                                <input type="text" class="form-control" id="proprio-lastname"
-                                    placeholder="Nom du Bailleur">
+                            <div class="form-group mx-auto my-form"><label for="proprio-name"></label>
+                                <h2>Bailleur</h2>
+                                <input type="text" class="form-control my-input" id="proprio-name"
+                                    placeholder="Nom et Prénom">
                             </div>
                             <div class="form-group mx-auto my-form">
                                 <label for="proprio-address"></label>
-                                <input type="text" class="form-control" id="proprio-address"
-                                    placeholder="Adresse du Bailleur">
+                                <input type="text" class="form-control my-input" id="proprio-address"
+                                    placeholder="Adresse">
                             </div>
                         </div>
                     </div>
+                    <div class="input-frame">
+                        <div class="row">
+                            <div class="form-group mx-auto my-form"><label for="lcoataire-name"></label>
+                                <h2>Locataire</h2>
+                                <input type="text" class="form-control my-input" id="locataire-name"
+                                    placeholder="Nom et Prénom">
+                            </div>
+                            <div class="form-group mx-auto my-form"><label for="locataire-address"></label>
+                                <input type="text" class="form-control my-input" id="locataire-address"
+                                    placeholder="Adresse du bien en location">
+                            </div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                    <div class="input-frame">
+                        <div class="row">
+                            <div class="form-group mx-auto my-form"><label for="lcoataire-name"></label>
+                                <h2>Dates</h2>
+                                <input type="text" class="form-control my-input" id="locataire-name"
+                                    placeholder="Nom et Prénom">
+                            </div>
+                            <div class="form-group mx-auto my-form"><label for="locataire-address"></label>
+                                <input type="text" class="form-control my-input" id="locataire-address"
+                                    placeholder="Adresse du bien en location">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="input-frame">
+                        <div class="row">
+                            <div class="form-group mx-auto my-form"><label for="loyer-ht"></label>
+                                <h2>Montants</h2>
+                                <input type="text" class="form-control my-input" id="loyer-ht"
+                                    placeholder="Loyer Hors Charges">
+                            </div>
+                            <div class="form-group mx-auto my-form"><label for="charges"></label>
+                                <input type="text" class="form-control my-input" id="charges" placeholder="Charges">
+                            </div>
+                            <div class="form-group mx-auto my-form"><label for="total"></label>
+                                <input type="text" class="form-control my-input" id="total" placeholder="Total" readonly>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </form>
             </div>
             <div class="col-md-6 preview-box">

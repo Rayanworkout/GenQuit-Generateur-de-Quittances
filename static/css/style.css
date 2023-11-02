@@ -1,6 +1,16 @@
+:root {
+    --main-color: #c8caff;
+    --main-bg-color: #eaeaea;
+    --text-color: #333;
+}
+
+
+
+
+
 .my-navbar {
-    color: #333;
-    background-color: #c8caff;
+    color: var(--text-color);
+    background-color: var(--main-color);
     padding: 20px;
     align-items: center;
     position: fixed;
@@ -8,7 +18,7 @@
 }
 
 .my-navbar .title {
-    color: #333;
+    color: var(--text-color);
     font-size: 2em;
     font-weight: bold;
     text-decoration: none;
@@ -42,8 +52,8 @@
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #333;
-    background-color: #eaeaea;
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
 
 }
 
@@ -59,12 +69,16 @@ h3 {
     font-size: 2em;
 }
 
+h2 {
+    margin-bottom: 30px;
+}
+
 
 .preview-box {
     padding: 20px;
     margin-left: 150px;
     border-radius: 10px;
-    background-color: #c8caff;
+    background-color: var(--main-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -184,7 +198,7 @@ h3 {
 }
 
 .my-input {
-    margin: 0 10px;
+    border-radius: 12px;
 }
 
 .my-form {
@@ -194,11 +208,12 @@ h3 {
 .input-frame {
     border: 1px solid #ccc;
     padding: 5px;
-    border-radius: 10px;
-    margin: 10px 0;
+    border-radius: 15px;
+    margin: 25px 0;
+    background-color: #ededed;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .input-frame:hover {
-    border: 0.5px solid #757575;
+    border: 2px solid var(--main-color);
 }
