@@ -3,6 +3,7 @@
     background-color: #c8caff;
     padding: 20px;
     align-items: center;
+    position: fixed;
 
 }
 
@@ -149,4 +150,35 @@ h3 {
 .preview .calcul {
     margin-top: 100px;
     text-align: right;
+}
+
+.preview .prix-ht {
+    text-align: right;
+}
+
+.preview .hc-tag {
+    float: left;
+    font-weight: normal;
+}
+
+.preview .charges {
+    text-align: right;
+}
+
+.preview .charges-tag {
+    float: left;
+    font-weight: normal;
+}
+
+.preview .total {
+    text-align: right;
+}
+
+.preview .total-tag {
+    float: left;
+    font-weight: normal;
+}
+
+.price-elem {
+    font-weight: bold;
 }
