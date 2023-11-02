@@ -182,3 +182,23 @@ h3 {
 .price-elem {
     font-weight: bold;
 }
+
+.my-input {
+    margin: 0 10px;
+}
+
+.my-form {
+    width: 80%;
+}
+
+.input-frame {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-frame:hover {
+    border: 0.5px solid #757575;
+}
