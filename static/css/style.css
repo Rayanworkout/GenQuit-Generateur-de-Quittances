@@ -1,7 +1,8 @@
 :root {
-    --main-color: #00A9FF;
-    --main-bg-color: #eaeaea;
-    --text-color: #333;
+    --main-color: #7c7df1;
+    --main-bg-color: #E8ECF1;
+    --preview-color: #9bafff;
+    --text-color: #242424;
 }
 
 
@@ -78,10 +79,10 @@ h2 {
     padding-bottom: 60px;
     width: 80%;
     height: 100%;
-    
+
     margin-left: 150px;
     border-radius: 10px;
-    background-color: var(--main-color);
+    background-color: var(--preview-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -222,7 +223,7 @@ h2 {
     padding: 5px;
     border-radius: 15px;
     margin: 25px 0;
-    background-color: #ededed;
+    background-color: #E8ECF1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -234,5 +235,5 @@ h2 {
     float: left;
     margin-left: 15px;
     margin-bottom: 2px;
-    
+
 }
