@@ -1,6 +1,3 @@
-
-// Cours OpenClassroom CSS
-
 // import { jsPDF } from "jspdf";
 
 
@@ -104,7 +101,7 @@ function updateTotal() {
     totalField.textContent = totalValue;
 
     // And then the Preview
-    totalPreview.textContent = totalValue
+    totalPreview.textContent = totalValue;
 
 }
 
@@ -122,7 +119,7 @@ dateFields.forEach((element, index) =>
         dateFormat: "d/m/Y",
         onChange: function (selectedDates) {
             if (index == 0) {
-                console.log(applyFormattedMonth(selectedDates[0]))
+                applyFormattedMonth(selectedDates[0]);
             }
         }
     }
