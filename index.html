@@ -66,7 +66,7 @@
                     </div>
                     <div class="input-frame">
                         <div class="row">
-                            <div class="form-group mx-auto my-form"><label for="lcoataire-name"></label>
+                            <div class="form-group mx-auto my-form">
                                 <h2 style="margin-bottom: 10px;">Dates</h2>
                                 <label for="date-from" class="date-label">Du</label>
                                 <input type="date" class="form-control my-input" id="date-from">
@@ -78,17 +78,17 @@
                     </div>
                     <div class="input-frame">
                         <div class="row">
-                            <div class="form-group mx-auto my-form"><label for="loyer-ht"></label>
+                            <div class="form-group mx-auto my-form">
                                 <h2>Montants</h2>
-                                <input type="text" class="form-control my-input" id="loyer-ht-input"
+                                <input type="number" class="form-control my-input" id="loyer-ht-input"
                                     placeholder="Loyer Hors Charges">
                             </div>
                             <div class="form-group mx-auto my-form"><label for="charges"></label>
-                                <input type="text" class="form-control my-input" id="charges-input"
+                                <input type="number" class="form-control my-input" id="charges-input"
                                     placeholder="Charges">
                             </div>
-                            <div class="form-group mx-auto my-form"><label for="total"></label>
-                                <input type="text" class="form-control my-input" id="total" placeholder="Total"
+                            <div class="form-group mx-auto my-form">
+                                <input type="text" class="form-control my-input" id="total-input" placeholder="Total"
                                     readonly>
                             </div>
 
@@ -126,13 +126,14 @@
                             <p class="calcul">Calcul</p>
                             <hr>
                             <p class="loyer-ht price-elem"><span class="hc-tag">Loyer Hors
-                                    Charges</span><span id="loyer-ht">{500} €</span></p>
+                                    Charges</span><span id="loyer-ht">{500}</span> €</p>
                             <hr>
-                            <p class="charges price-elem"><span class="charges-tag">Charges</span> <span
-                                    id="charges">{50} €</span>
+                            <p class="charges price-elem"><span class="charges-tag">Charges</span><span
+                                    id="charges">{50}</span> €
                             </p>
                             <hr>
-                            <p class="total price-elem"><span class="total-tag">Total</span>{550} €</p>
+                            <p class="total price-elem"><span class="total-tag">Total</span><span
+                                    id="total">{550}</span> €</p>
                         </div>
                     </div>
                 </div>

@@ -19,3 +19,34 @@ inputFields.forEach((input, index) => {
 
 });
 
+
+// Adding event listener to auto-calculate total and fill preview
+
+const loyerField = document.getElementById('loyer-ht-input');
+
+const chargesField = document.getElementById('charges-input');
+
+const totalField = document.getElementById('total-input');
+
+
+// Using global variable with totalField because the script is short
+
+function updateTotal() {
+    const loyerValue = parseInt(loyerField.value) || 0;
+    const chargesValue = parseInt(chargesField.value) || 0;
+    const totalValue = loyerValue + chargesValue;
+
+    totalField.value = totalValue;
+}
+
+
+loyerField.addEventListener('input', updateTotal);
+chargesField.addEventListener('input', updateTotal);
+
+updateTotal();
+
+
+totalField.addEventListener('input', function () {
+    const totalValue = totalField.value;
+    console.log('change');
+})
