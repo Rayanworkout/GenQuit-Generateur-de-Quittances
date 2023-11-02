@@ -18,7 +18,7 @@ function getDate() {
 
 // Function to convert datetime object to full month name
 
-function getMonth(dateObject) {
+function getMonthAndYear(dateObject) {
 
     const months = {
         0: 'Janvier',
@@ -36,14 +36,16 @@ function getMonth(dateObject) {
     }
 
     const month = dateObject.getMonth();
-    return months[month]
+    const fullMonth = months[month]
+    const year = dateObject.getFullYear()
+    return  `${fullMonth} ${year}`
 }
 
 
 // Fonction to apply the formatted month to the preview
 
 function applyFormattedMonth(dateObject) {
-    const fullMonth = getMonth(dateObject)
+    const fullMonth = getMonthAndYear(dateObject)
     const monthPreview = document.getElementById('preview-month')
 
     monthPreview.textContent = fullMonth
