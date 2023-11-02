@@ -1,5 +1,5 @@
 :root {
-    --main-color: #83d5ff;
+    --main-color: #00A9FF;
     --main-bg-color: #eaeaea;
     --text-color: #333;
 }
@@ -173,7 +173,7 @@ h2 {
     text-align: right;
 }
 
-.preview .prix-ht {
+.preview .loyer-ht {
     text-align: right;
 }
 

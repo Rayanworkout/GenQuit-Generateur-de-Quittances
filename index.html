@@ -80,11 +80,12 @@
                         <div class="row">
                             <div class="form-group mx-auto my-form"><label for="loyer-ht"></label>
                                 <h2>Montants</h2>
-                                <input type="text" class="form-control my-input" id="loyer-ht"
+                                <input type="text" class="form-control my-input" id="loyer-ht-input"
                                     placeholder="Loyer Hors Charges">
                             </div>
                             <div class="form-group mx-auto my-form"><label for="charges"></label>
-                                <input type="text" class="form-control my-input" id="charges" placeholder="Charges">
+                                <input type="text" class="form-control my-input" id="charges-input"
+                                    placeholder="Charges">
                             </div>
                             <div class="form-group mx-auto my-form"><label for="total"></label>
                                 <input type="text" class="form-control my-input" id="total" placeholder="Total"
@@ -101,30 +102,35 @@
                 <div class="container preview">
                     <div class="row">
                         <div class="col">
-                            <p class="proprio-name">Nom Prénom</p>
-                            <p class="proprio-address">Adresse</p>
+                            <p class="proprio-name" id="proprio-name-preview">Nom Prénom</p>
+                            <p class="proprio-address" id="proprio-address-preview">Adresse</p>
                         </div>
                         <div class="col">
-                            <p class="locataire-name">Nom Prénom Locataire</p>
-                            <p class="locataire-address">Adresse du bien</p>
+                            <p class="locataire-name" id="locataire-name-preview">Nom Prénom Locataire</p>
+                            <p class="locataire-address" id="locataire-address-preview">Adresse du bien</p>
                         </div>
 
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p class="month">Quittance de Novembre</p>
-                            <p>Le <span class="date">{date du jour}</span></p>
-                            <p class="periode">Pour la période du <span class="periode-elem">22/05/2023</span> au <span
-                                    class="periode-elem">22/06/2023</span></p>
+                            <p class="month" id="current-month">Quittance de {Novembre}</p>
+                            <p>Le <span class="date" id="date-today">{date du jour}</span></p>
+                            <p class="periode">Pour la période du
+                                <span class="periode-elem" id="periode-preview">22/05/2023
+                                </span> au <span class="periode-elem" id="periode-end-preview">22/06/2023</span>
+                            </p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <p class="calcul">Calcul</p>
                             <hr>
-                            <p class="prix-ht price-elem"><span class="hc-tag">Loyer Hors Charges</span>{500} €</p>
+                            <p class="loyer-ht price-elem"><span class="hc-tag">Loyer Hors
+                                    Charges</span><span id="loyer-ht">{500} €</span></p>
                             <hr>
-                            <p class="charges price-elem"><span class="charges-tag">Charges</span>{50} €</p>
+                            <p class="charges price-elem"><span class="charges-tag">Charges</span> <span
+                                    id="charges">{50} €</span>
+                            </p>
                             <hr>
                             <p class="total price-elem"><span class="total-tag">Total</span>{550} €</p>
                         </div>
