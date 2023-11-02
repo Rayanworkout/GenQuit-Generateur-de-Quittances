@@ -67,13 +67,11 @@
                     <div class="input-frame">
                         <div class="row">
                             <div class="form-group mx-auto my-form"><label for="lcoataire-name"></label>
-                                <h2>Dates</h2>
-                                <input type="text" class="form-control my-input" id="locataire-name"
-                                    placeholder="Nom et Prénom">
-                            </div>
-                            <div class="form-group mx-auto my-form"><label for="locataire-address"></label>
-                                <input type="text" class="form-control my-input" id="locataire-address"
-                                    placeholder="Adresse du bien en location">
+                                <h2 style="margin-bottom: 10px;">Dates</h2>
+                                <label for="date-from" class="date-label">Du</label>
+                                <input type="date" class="form-control my-input" id="date-from">
+                                <label for="date-to" class="date-label">Au</label>
+                                <input type="date" class="form-control my-input" id="date-to">
                             </div>
 
                         </div>
@@ -89,7 +87,8 @@
                                 <input type="text" class="form-control my-input" id="charges" placeholder="Charges">
                             </div>
                             <div class="form-group mx-auto my-form"><label for="total"></label>
-                                <input type="text" class="form-control my-input" id="total" placeholder="Total" readonly>
+                                <input type="text" class="form-control my-input" id="total" placeholder="Total"
+                                    readonly>
                             </div>
 
                         </div>

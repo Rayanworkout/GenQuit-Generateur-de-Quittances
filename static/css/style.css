@@ -1,9 +1,8 @@
 :root {
-    --main-color: #c8caff;
+    --main-color: #83d5ff;
     --main-bg-color: #eaeaea;
     --text-color: #333;
 }
-
 
 
 
@@ -70,16 +69,24 @@ h3 {
 }
 
 h2 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 
 .preview-box {
     padding: 20px;
+    padding-bottom: 60px;
+    width: 80%;
+    height: 100%;
+    
     margin-left: 150px;
     border-radius: 10px;
     background-color: var(--main-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.preview-box:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .preview {
@@ -216,4 +223,11 @@ h2 {
 
 .input-frame:hover {
     border: 2px solid var(--main-color);
+}
+
+.date-label {
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 2px;
+    
 }
