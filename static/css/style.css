@@ -25,19 +25,19 @@
 }
 
 .my-navbar .title:hover {
-    color: #757575;
+    color: #ffffff;
     cursor: pointer;
 }
 
 .github {
-    color: #333;
+    color: var(--text-color);
     font-size: 20px;
     font-weight: 500;
     text-decoration: none !important;
 }
 
 .github:hover {
-    color: #757575;
+    color: #ffffff;
     cursor: pointer;
 }
 
