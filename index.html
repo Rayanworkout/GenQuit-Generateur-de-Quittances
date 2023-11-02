@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="static/css/style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenQuit</title>
+</head>
+
+<body id="body">
+    <div class="container col-8">
+        <h1 id="page-header">Créez facilement vos quittances de loyer !</h1>
+        <h3>
+            Pas d'inscription, pas de pub, open-source.
+        </h3>
+    </div>
+
+    <nav class="navbar navbar-expand-lg fixed-top my-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand title" href="#">GenQuit</a>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="github" href="#">Github<img src="static/img/github-logo.png" class="github-logo"
+                            alt="Github logo"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container col-11 text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <form>
+                    <h3>Formulaire</h3>
+                    <div class="first-form">
+                        <div class="form-group">
+                            <label for="proprio-firstname"></label>
+                            <input type="text" class="form-control" id="proprio-firstname"
+                                placeholder="Prénom du Bailleur">
+                        </div>
+                        <div class="form-group">
+                            <label for="proprio-lastname"></label>
+                            <input type="text" class="form-control" id="proprio-lastname" placeholder="Nom du Bailleur">
+                        </div>
+                        <div class="form-group">
+                            <label for="proprio-address"></label>
+                            <input type="text" class="form-control" id="proprio-address"
+                                placeholder="Adresse du Bailleur">
+                        </div>
+                    </div>
+                    <div class="second-form">
+                        <div class="form-group">
+                            <label for="locataire-name"></label>
+                            <input type="text" class="form-control" id="proprio-name"
+                                placeholder="Nom et Prénom du locataire">
+                        </div>
+                    </div>
+                    <div class="third-form">
+                        <div class="form-group">
+                            <label for="appartement"></label>
+                            <input type="text" class="form-control" id="proprio-name" placeholder="Adresse du bien">
+                        </div>
+                        <div class="form-group">
+                            <label for="dates"></label>
+                            <input type="text" class="form-control" id="dates" placeholder="Du">
+                            <input type="text" class="form-control" id="dates" placeholder="Au">
+                        </div>
+                    </div>
+                    <div class="fourth-form">
+                        <div class="form-group">
+                            <label for="loyer-ht"></label>
+                            <input type="text" class="form-control" id="loyer-ht" placeholder="Loyer HT">
+                        </div>
+                        <div class="form-group">
+                            <label for="charges"></label>
+                            <input type="text" class="form-control" id="charges" placeholder="Charges">
+                        </div>
+                        <div class="form-group">
+                            <label for="total"></label>
+                            <input type="text" class="form-control" id="total" placeholder="Total">
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6 preview-box">
+                <h3>Preview</h3>
+                <div class="preview"><p class="proprio-name">Nom Prénom</p></div>
+            </div>
+
+        </div>
+    </div>
+    <script src="static/js/index.js"></script>
+</body>
+
+</html>

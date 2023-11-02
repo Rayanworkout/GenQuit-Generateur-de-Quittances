@@ -1,0 +1,84 @@
+.my-navbar {
+    color: #333;
+    background-color: #c8caff;
+    padding: 20px;
+    align-items: center;
+
+}
+
+.my-navbar .title {
+    color: #333;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.my-navbar .title:hover {
+    color: #757575;
+    cursor: pointer;
+}
+
+.github {
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+.github:hover {
+    color: #757575;
+    cursor: pointer;
+}
+
+.github-logo {
+    width: 30px;
+    margin-left: 8px;
+    text-decoration: none;
+}
+
+
+#body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #eaeaea;
+
+}
+
+
+h1 {
+    margin-top: 130px;
+    font-size: 3em;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+
+.preview-box {
+    padding: 20px;
+    margin-left: 150px;
+    border-radius: 10px;
+    background-color: #c8caff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.preview {
+    width: 85%;
+    height: 85%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.preview .proprio-name {
+    font-size: 1em;
+    text-align: left;
+    font-weight: bold;
+}
