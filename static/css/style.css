@@ -6,8 +6,6 @@
 }
 
 
-
-
 .my-navbar {
     color: var(--text-color);
     background-color: var(--main-color);
@@ -79,7 +77,6 @@ h2 {
     border-radius: 10px;
     color: var(--text-color);
     font-weight: 600;
-    border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     margin-bottom: 30px;
