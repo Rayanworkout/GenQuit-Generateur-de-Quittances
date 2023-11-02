@@ -4,11 +4,23 @@
 // import { jsPDF } from "jspdf";
 
 
-// Fonction to get date
-// id="date-today
-// id = current-month
+// Fonction to get today's date
 
+function getDate() {
+    const today = new Date();
+    const day = today.getDay();
+    const month = today.getMonth();
+    const year = today.getFullYear()
 
+    const formattedToday = `${day}/${month}/${year}`
+
+    return formattedToday
+}
+
+// Assigning the value to my preview
+
+const previewDate = document.getElementById('date-today')
+previewDate.textContent = getDate()
 
 
 
@@ -56,3 +68,14 @@ function updateTotal() {
 
 loyerField.addEventListener('input', updateTotal);
 chargesField.addEventListener('input', updateTotal);
+
+
+// Customizing date picker fields with flatpicker
+
+dateFields = document.querySelectorAll('.date-picker');
+
+dateFields.forEach((element) =>
+    flatpickr(element, {
+        dateFormat: "d/m/Y",
+    }));
+
