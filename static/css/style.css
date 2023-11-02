@@ -208,6 +208,11 @@ h2 {
     border-radius: 12px;
 }
 
+#total-input {
+    text-align: left;
+    font-weight: 600;
+}
+
 .my-form {
     width: 80%;
 }

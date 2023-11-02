@@ -9,6 +9,9 @@
 // id = current-month
 
 
+
+
+
 // Get all input fields + preview fields of the page and add an
 // event listener to mirror the content
 
@@ -53,6 +56,3 @@ function updateTotal() {
 
 loyerField.addEventListener('input', updateTotal);
 chargesField.addEventListener('input', updateTotal);
-
-updateTotal();
-
