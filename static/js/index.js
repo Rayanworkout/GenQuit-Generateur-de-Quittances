@@ -47,12 +47,11 @@ function getMonth(dateObject) {
 
 function applyFormattedMonth(dateObject) {
     const fullMonth = getMonth(dateObject)
-    const monthPreview = document.getElementById('month-preview')
+    const monthPreview = document.getElementById('preview-month')
 
     monthPreview.textContent = fullMonth
 
     return fullMonth
-
 
 }
 
@@ -121,7 +120,7 @@ dateFields = document.querySelectorAll('.date-picker');
 dateFields.forEach((element, index) =>
     flatpickr(element, {
         dateFormat: "d/m/Y",
-        onChange: function (selectedDates, dateStr, instance) {
+        onChange: function (selectedDates) {
             if (index == 0) {
                 console.log(applyFormattedMonth(selectedDates[0]))
             }
