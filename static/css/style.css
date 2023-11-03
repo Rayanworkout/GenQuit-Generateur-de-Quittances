@@ -10,22 +10,6 @@
 /* MEDIA QUERIES */
 
 
-.container {
-    max-width: 1536px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-
-/* 2xl */
-@media (max-width: 1536px) {
-    .container {
-        max-width: 1280px;
-    }
-
-}
-
 /* xl */
 @media (max-width: 1280px) {
     .container {
