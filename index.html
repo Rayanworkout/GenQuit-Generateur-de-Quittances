@@ -26,10 +26,10 @@
 <body id="body">
     <nav class="navbar navbar-expand-lg fixed-top my-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand title" href="#">GenQuit</a>
+            <a class="navbar-brand title" href="#" id="navbar-title" target="_blank">GenQuit</a>
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ml-auto">
+                <div class="navbar-nav ml-auto" id="github">
                     <a class="github" href="https://github.com/Rayanworkout/GenQuit-Generateur-de-Quittances"
                         target="_blank">Github<img src="static/img/github-logo.png" class="github-logo"
                             alt="Github logo"></a>
@@ -37,7 +37,7 @@
             </div>
         </div>
     </nav>
-    <div class="container col-8">
+    <div class="container col-8" id="titles-container">
         <h1 id="page-header">Créez facilement vos quittances de loyer !</h1>
         <h3>
             Pas d'inscription, pas de pub, open-source.
@@ -45,7 +45,7 @@
     </div>
     <div class="container col-11 text-center">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" id="form-container">
                 <form>
                     <div class="input-frame">
                         <div class="row">
@@ -108,7 +108,7 @@
 
                 </form>
             </div>
-            <div class="col-md-6 preview-box">
+            <div class="col-md-6 preview-box" id="preview-container">
                 <h3>Prévisualisation</h3>
                 <button class="btn my-btn" id="download-btn">Télécharger</button>
                 <div class="container preview">

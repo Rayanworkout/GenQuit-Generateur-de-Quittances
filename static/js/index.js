@@ -1,5 +1,3 @@
-// import { jsPDF } from "jspdf";
-
 
 ////////////////// FUNCTIONS //////////////////////
 
@@ -127,3 +125,16 @@ dateFields.forEach((element, index) =>
     }
     ));
 
+
+
+//// Responsive //////
+
+// Adding the github link to the title on smaller screens
+
+if (window.innerWidth <= 1024) {
+    // Mobile screen size
+    document.getElementById("navbar-title").href = "https://github.com/Rayanworkout/GenQuit-Generateur-de-Quittances";
+} else {
+    // Desktop screen size
+    document.getElementById("navbar-title").href = "#";
+}
