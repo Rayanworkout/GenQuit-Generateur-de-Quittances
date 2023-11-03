@@ -36,7 +36,7 @@ function getMonthAndYear(dateObject) {
     const month = dateObject.getMonth();
     const fullMonth = months[month]
     const year = dateObject.getFullYear()
-    return  `${fullMonth} ${year}`
+    return `${fullMonth} ${year}`
 }
 
 
@@ -124,17 +124,3 @@ dateFields.forEach((element, index) =>
         }
     }
     ));
-
-
-
-//// Responsive //////
-
-// Adding the github link to the title on smaller screens
-
-if (window.innerWidth <= 1024) {
-    // Mobile screen size
-    document.getElementById("navbar-title").href = "https://github.com/Rayanworkout/GenQuit-Generateur-de-Quittances";
-} else {
-    // Desktop screen size
-    document.getElementById("navbar-title").href = "#";
-}
