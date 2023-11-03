@@ -1,6 +1,34 @@
 
 ////////////////// FUNCTIONS //////////////////////
 
+
+const downloadBtn = document.querySelector('.download-btn')
+
+downloadBtn.addEventListener('click', createQuittance(
+document.getElementById('proprio-name').value,
+document.getElementById('proprio-address').value,
+document.getElementById('locataire-name').value,
+document.getElementById('locataire-address').value,
+document.getElementById('preview-month').value,
+getDate(),
+document.getElementById('date-from').value,
+document.getElementById('date-to').value,
+document.getElementById('loyer-ht-input').value,
+document.getElementById('charges-input').value,
+document.getElementById('total-input').value
+))
+
+
+
+
+
+
+
+
+
+
+
+
 // Fonction to get today's date
 
 function getDate() {
