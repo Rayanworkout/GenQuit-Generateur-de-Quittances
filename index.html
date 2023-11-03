@@ -7,6 +7,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="static/css/style.css">
 
+<!-- jspdf script -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
 
 <!-- Include the flatpickr CSS file -->
@@ -29,8 +30,9 @@
             GenQuit
         </a>
         <div class="d-flex">
-            <a class="nav-link" href="https://github.com/Rayanworkout/GenQuit-Generateur-de-Quittances" target="_blank" id="github">Github <img
-                    src="static/img/github-logo.png" width="30" height="30" class="d-inline-block" alt=""></a>
+            <a class="nav-link" href="https://github.com/Rayanworkout/GenQuit-Generateur-de-Quittances" target="_blank"
+                id="github">Github <img src="static/img/github-logo.png" width="30" height="30" class="d-inline-block"
+                    alt=""></a>
         </div>
     </nav>
     <div class="container col-8" id="titles-container">
@@ -106,7 +108,18 @@
             </div>
             <div class="col-md-6 preview-box" id="preview-container">
                 <h3>Prévisualisation</h3>
-                <button class="btn my-btn" id="download-btn">Télécharger</button>
+                <button class="btn my-btn" id="download-btn" onclick="createQuittance(
+                    document.getElementById('proprio-name').value,
+                    document.getElementById('proprio-address').value,
+                    document.getElementById('locataire-name').value,
+                    document.getElementById('locataire-address').value,
+                    document.getElementById('date-from').value,
+                    document.getElementById('date-to').value,
+                    document.getElementById('loyer-ht-input').value,
+                    document.getElementById('charges-input').value,
+                    document.getElementById('total-input').value
+                    
+                )">Télécharger</button>
                 <div class="container preview">
                     <div class="row">
                         <div class="col">
@@ -150,6 +163,8 @@
         </div>
 
         <script src="static/js/index.js"></script>
+        <script src="static/js/pdf_generation.js"></script>
+
 </body>
 
 </html>
