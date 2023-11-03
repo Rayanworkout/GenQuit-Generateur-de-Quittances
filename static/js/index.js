@@ -52,6 +52,7 @@ function applyFormattedMonth(dateObject) {
 
 }
 
+
 ////////////////// PREVIEW //////////////////////////
 
 // Assigning the date value to my preview
@@ -124,3 +125,7 @@ dateFields.forEach((element, index) =>
         }
     }
     ));
+
+
+
+
