@@ -1,51 +1,6 @@
 
 ////////////////// FUNCTIONS //////////////////////
 
-
-// Monitoring when download button is clicked
-const downloadBtn = document.querySelector('.download-btn')
-
-downloadBtn.addEventListener('click', function () {
-
-    // Getting the values of the fields
-    const proprioName = document.getElementById('proprio-name').value;
-    const proprioAddress = document.getElementById('proprio-address').value;
-    const locataireName = document.getElementById('locataire-name').value;
-    const locataireAddress = document.getElementById('locataire-address').value;
-    const month = document.getElementById('preview-month').value;
-    const date = getDate();
-    const periodeFrom = document.getElementById('date-from').value;
-    const periodeTo = document.getElementById('date-to').value;
-    const loyerHc = document.getElementById('loyer-ht-input').value;
-    const charges = document.getElementById('charges-input').value;
-    const total = +loyerHc + +charges;
-
-    console.log(proprioName, proprioAddress, locataireName, locataireAddress, month, date, periodeFrom, periodeTo, loyerHc, charges, total)
-
-    // Checking if all fields are filled
-    if (!proprioName || !proprioAddress || !locataireName || !locataireAddress || !month || !periodeFrom || !periodeTo || !loyerHc || !charges) {
-        window.alert("Veuillez remplir tous les champs")
-    } else {
-
-        // Calling the function to create the quittance
-        createQuittance(proprioName,
-            proprioAddress,
-            locataireName,
-            locataireAddress,
-            month,
-            date,
-            periodeFrom,
-            periodeTo,
-            loyerHc,
-            charges,
-            total
-        )
-    }
-
-})
-
-
-
 // Fonction to get today's date
 
 function getDate() {
@@ -58,6 +13,52 @@ function getDate() {
 
     return formattedToday
 }
+
+console.log(getDate())
+
+// Monitoring when download button is clicked
+const downloadBtn = document.querySelector('.download-btn')
+
+downloadBtn.addEventListener('click', function () {
+
+    // Getting the values of the fields
+    const proprioName = document.querySelector('#proprio-name').value;
+    const proprioAddress = document.querySelector('#proprio-address').value;
+    const locataireName = document.querySelector('#locataire-name').value;
+    const locataireAddress = document.querySelector('#locataire-address').value;
+    const month = document.querySelector('#preview-month').textContent;
+    const date = getDate();
+    const periodeFrom = document.querySelector('#date-from').value;
+    const periodeTo = document.querySelector('#date-to').value;
+    const loyerHc = document.querySelector('#loyer-ht-input').value;
+    const charges = document.querySelector('#charges-input').value;
+    const total = +loyerHc + +charges;
+
+
+    // Checking if all fields are filled
+    if (!proprioName || !proprioAddress || !locataireName || !locataireAddress || !month || !periodeFrom || !periodeTo || !loyerHc || !charges) {
+        window.alert("Veuillez remplir tous les champs.")
+    } else {
+
+        // Calling the function to create the quittance
+        const result = createQuittance(proprioName,
+            proprioAddress,
+            locataireName,
+            locataireAddress,
+            month,
+            date,
+            periodeFrom,
+            periodeTo,
+            loyerHc,
+            charges,
+            total.toString()
+        )
+        if (!result) {
+            window.alert("Une erreur est survenue. Veuillez réessayer.")
+        }
+    }
+
+})
 
 // Function to convert datetime object to full month name
 
@@ -89,7 +90,7 @@ function getMonthAndYear(dateObject) {
 
 function applyFormattedMonth(dateObject) {
     const fullMonth = getMonthAndYear(dateObject)
-    const monthPreview = document.getElementById('preview-month')
+    const monthPreview = document.querySelector('#preview-month')
 
     monthPreview.textContent = fullMonth
 
@@ -102,7 +103,7 @@ function applyFormattedMonth(dateObject) {
 
 // Assigning the date value to my preview
 
-const previewDate = document.getElementById('date-today')
+const previewDate = document.querySelector('#date-today')
 previewDate.textContent = getDate()
 
 
@@ -125,9 +126,9 @@ inputFields.forEach((input, index) => {
 
 // Adding event listener to auto-calculate total and fill preview
 
-const loyerField = document.getElementById('loyer-ht-input');
+const loyerField = document.querySelector('#loyer-ht-input');
 
-const chargesField = document.getElementById('charges-input');
+const chargesField = document.querySelector('#charges-input');
 
 
 // Using global variable with totalField because the script is short
@@ -139,9 +140,9 @@ function updateTotal() {
     const totalValue = loyerValue + chargesValue;
 
 
-    const totalField = document.getElementById('total-input')
+    const totalField = document.querySelector('#total-input')
 
-    const totalPreview = document.getElementById('total');
+    const totalPreview = document.querySelector('#total');
 
     // Updating the total
     totalField.textContent = totalValue;
@@ -170,7 +171,3 @@ dateFields.forEach((element, index) =>
         }
     }
     ));
-
-
-
-
