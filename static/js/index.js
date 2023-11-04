@@ -2,30 +2,47 @@
 ////////////////// FUNCTIONS //////////////////////
 
 
+// Monitoring when download button is clicked
 const downloadBtn = document.querySelector('.download-btn')
 
-downloadBtn.addEventListener('click', createQuittance(
-document.getElementById('proprio-name').value,
-document.getElementById('proprio-address').value,
-document.getElementById('locataire-name').value,
-document.getElementById('locataire-address').value,
-document.getElementById('preview-month').value,
-getDate(),
-document.getElementById('date-from').value,
-document.getElementById('date-to').value,
-document.getElementById('loyer-ht-input').value,
-document.getElementById('charges-input').value,
-document.getElementById('total-input').value
-))
+downloadBtn.addEventListener('click', function () {
 
+    // Getting the values of the fields
+    const proprioName = document.getElementById('proprio-name').value;
+    const proprioAddress = document.getElementById('proprio-address').value;
+    const locataireName = document.getElementById('locataire-name').value;
+    const locataireAddress = document.getElementById('locataire-address').value;
+    const month = document.getElementById('preview-month').value;
+    const date = getDate();
+    const periodeFrom = document.getElementById('date-from').value;
+    const periodeTo = document.getElementById('date-to').value;
+    const loyerHc = document.getElementById('loyer-ht-input').value;
+    const charges = document.getElementById('charges-input').value;
+    const total = +loyerHc + +charges;
 
+    console.log(proprioName, proprioAddress, locataireName, locataireAddress, month, date, periodeFrom, periodeTo, loyerHc, charges, total)
 
+    // Checking if all fields are filled
+    if (!proprioName || !proprioAddress || !locataireName || !locataireAddress || !month || !periodeFrom || !periodeTo || !loyerHc || !charges) {
+        window.alert("Veuillez remplir tous les champs")
+    } else {
 
+        // Calling the function to create the quittance
+        createQuittance(proprioName,
+            proprioAddress,
+            locataireName,
+            locataireAddress,
+            month,
+            date,
+            periodeFrom,
+            periodeTo,
+            loyerHc,
+            charges,
+            total
+        )
+    }
 
-
-
-
-
+})
 
 
 

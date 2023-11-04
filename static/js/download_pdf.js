@@ -71,6 +71,5 @@ function createQuittance(proprioName,
   const outputFilename = 'quittance_de_loyer.pdf';
   doc.save(outputFilename);
 
-  console.log(`La quittance de loyer a été générée dans ${outputFilename}`);
 }
 
