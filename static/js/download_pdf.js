@@ -1,21 +1,4 @@
 
-
-// Function to split address in case it is too long
-function splitAddress(address) {
-  if (address.length > 25) {
-    const addressArray = address.split('');
-    const firstHalf = addressArray.slice(0, 25).join('');
-    const secondHalf = addressArray.slice(25).join('');
-
-    return `${firstHalf}\n${secondHalf}`;
-  } else {
-    return address;
-  }
-
-
-}
-
-
 const { jsPDF } = window.jspdf;
 
 function createQuittance(proprioName,
@@ -39,14 +22,14 @@ function createQuittance(proprioName,
   try {
     doc.setFontSize(14);
 
-    doc.text(proprioName, 10, 13);
+    doc.text(proprioName.substring(0, 50), 10, 13);
 
-    doc.text(splitAddress(proprioAddress), 10, 20);
+    doc.text(splitAddress(proprioAddress.substring(0, 70)), 10, 20);
 
 
-    doc.text(locataireName, 130, 13);
+    doc.text(locataireName.substring(0, 50), 130, 13);
 
-    doc.text(splitAddress(locataireAddress), 130, 20);
+    doc.text(splitAddress(locataireAddress.substring(0, 70)), 130, 20);
 
     doc.line(10, 30, 100, 30);
 
@@ -66,12 +49,12 @@ function createQuittance(proprioName,
     doc.line(10, 205, 200, 205);
 
     doc.text('Loyer Hors Charges', 10, 215);
-    doc.text(`${loyerHc} €`, 183, 215)
+    doc.text(`${loyerHc.substring(0, 7)} €`, 183, 215)
 
     doc.line(10, 220, 200, 220);
 
     doc.text('Charges', 10, 230);
-    doc.text(`${charges} €`, 183, 230);
+    doc.text(`${charges.substring(0, 7)} €`, 183, 230);
 
     doc.line(10, 235, 200, 235);
 

@@ -1,10 +1,19 @@
 
 ////////////////// FUNCTIONS //////////////////////
 
-
-// MOIS AVEC APOSTROPHE d'avril + ADD COMMENTS
-// + ADD TO README
-
+// Function to split address in case it is too long
+function splitAddress(address) {
+    if (address.length > 25) {
+      const addressArray = address.split('');
+      const firstHalf = addressArray.slice(0, 25).join('');
+      const secondHalf = addressArray.slice(25).join('');
+  
+      return `${firstHalf}\n${secondHalf}`;
+    } else {
+      return address;
+    }
+  
+  }
 
 // Fonction to get today's date
 
@@ -18,50 +27,6 @@ function getDate() {
 
     return formattedToday
 }
-
-// Monitoring when download button is clicked
-const downloadBtn = document.querySelector('.download-btn')
-
-downloadBtn.addEventListener('click', function () {
-
-    // Getting the values of the fields
-    const proprioName = document.querySelector('#proprio-name').value;
-    const proprioAddress = document.querySelector('#proprio-address').value;
-    const locataireName = document.querySelector('#locataire-name').value;
-    const locataireAddress = document.querySelector('#locataire-address').value;
-    const month = document.querySelector('#preview-month').textContent;
-    const date = getDate();
-    const periodeFrom = document.querySelector('#date-from').value;
-    const periodeTo = document.querySelector('#date-to').value;
-    const loyerHc = document.querySelector('#loyer-ht-input').value;
-    const charges = document.querySelector('#charges-input').value;
-    const total = +loyerHc + +charges;
-
-
-    // Checking if all fields are filled
-    if (!proprioName || !proprioAddress || !locataireName || !locataireAddress || !month || !periodeFrom || !periodeTo || !loyerHc || !charges) {
-        window.alert("Veuillez remplir tous les champs.")
-    } else {
-
-        // Calling the function to create the quittance
-        const result = createQuittance(proprioName,
-            proprioAddress,
-            locataireName,
-            locataireAddress,
-            month,
-            date,
-            periodeFrom,
-            periodeTo,
-            loyerHc,
-            charges,
-            total.toString()
-        )
-        if (!result) {
-            window.alert("Une erreur est survenue. Veuillez réessayer.")
-        }
-    }
-
-})
 
 // Function to convert datetime object to full month name
 
@@ -109,6 +74,21 @@ function applyFormattedMonth(dateObject) {
 
 }
 
+
+// Customizing date picker fields with flatpicker
+
+dateFields = document.querySelectorAll('.date-picker');
+
+dateFields.forEach((element, index) =>
+    flatpickr(element, {
+        dateFormat: "d/m/Y",
+        onChange: function (selectedDates) {
+            if (index == 0) {
+                applyFormattedMonth(selectedDates[0]);
+            }
+        }
+    }
+    ));
 
 ////////////////// PREVIEW //////////////////////////
 
@@ -168,17 +148,49 @@ loyerField.addEventListener('input', updateTotal);
 chargesField.addEventListener('input', updateTotal);
 
 
-// Customizing date picker fields with flatpicker
 
-dateFields = document.querySelectorAll('.date-picker');
+///////////////// DOWNLOAD /////////////////////////
 
-dateFields.forEach((element, index) =>
-    flatpickr(element, {
-        dateFormat: "d/m/Y",
-        onChange: function (selectedDates) {
-            if (index == 0) {
-                applyFormattedMonth(selectedDates[0]);
-            }
+// Monitoring when download button is clicked
+const downloadBtn = document.querySelector('.download-btn')
+
+downloadBtn.addEventListener('click', function () {
+
+    // Getting the values of the fields
+    const proprioName = document.querySelector('#proprio-name').value;
+    const proprioAddress = document.querySelector('#proprio-address').value;
+    const locataireName = document.querySelector('#locataire-name').value;
+    const locataireAddress = document.querySelector('#locataire-address').value;
+    const month = document.querySelector('#preview-month').textContent;
+    const date = getDate();
+    const periodeFrom = document.querySelector('#date-from').value;
+    const periodeTo = document.querySelector('#date-to').value;
+    const loyerHc = document.querySelector('#loyer-ht-input').value;
+    const charges = document.querySelector('#charges-input').value;
+    const total = +loyerHc + +charges;
+
+
+    // Checking if all fields are filled
+    if (!proprioName || !proprioAddress || !locataireName || !locataireAddress || !month || !periodeFrom || !periodeTo || !loyerHc || !charges) {
+        window.alert("Veuillez remplir tous les champs.")
+    } else {
+
+        // Calling the function to create the quittance
+        const result = createQuittance(proprioName,
+            proprioAddress,
+            locataireName,
+            locataireAddress,
+            month,
+            date,
+            periodeFrom,
+            periodeTo,
+            loyerHc,
+            charges,
+            total.toString()
+        )
+        if (!result) {
+            window.alert("Une erreur est survenue. Veuillez réessayer.")
         }
     }
-    ));
+
+})
