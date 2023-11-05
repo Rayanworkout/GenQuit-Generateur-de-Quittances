@@ -1,46 +1,13 @@
 :root {
     --main-color: #7c7df1;
-    --main-bg-color: #E8ECF1;
+    --main-bg-color: #e8ecf1;
     --preview-color: #9bafff;
     --text-color: #242424;
 }
 
-
-
-/* MEDIA QUERIES */
-
-
-/* xl */
-@media (max-width: 1280px) {
-    .container {
-        max-width: 1024px;
-    }
-
-    #titles-container {
-        font-size: 70%;
-    }
-
-    #preview-container {
-        display: none;
-    }
-}
-
-/* lg */
-@media (max-width: 1024px) {
-    .container {
-        max-width: 768px;
-    }
-
-    #github {
-        display: none;
-    }
-}
-
-
 .my-navbar {
     background-color: var(--main-color);
     padding: 0.3rem;
-
 }
 
 #navbar-title {
@@ -53,30 +20,34 @@
 
 #navbar-title:hover {
     color: #ffffff;
+    
 }
 
-#github {
+.open-source-link {
+    text-decoration: none !important;
+    color: var(--main-color);
+}
+
+
+.git-link {
     color: var(--text-color);
     font-size: 20px;
     font-weight: 500;
     text-decoration: none !important;
 }
 
-#github:hover {
+.git-link:hover {
     color: #ffffff;
     cursor: pointer;
 }
 
-
 #body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: var(--text-color);
     background-color: var(--main-bg-color);
-
 }
-
 
 h1 {
     margin-top: 50px;
@@ -101,13 +72,11 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     margin-bottom: 30px;
-
 }
 
 .my-btn:hover {
     background-color: var(--main-color);
 }
-
 
 .preview-box {
     padding: 20px;
@@ -253,13 +222,12 @@ h2 {
     width: 80%;
 }
 
-
 .input-frame {
     border: 1px solid #ccc;
     padding: 5px;
     border-radius: 15px;
     margin: 25px 0;
-    background-color: #E8ECF1;
+    background-color: #e8ecf1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -271,5 +239,29 @@ h2 {
     float: left;
     margin-left: 15px;
     margin-bottom: 2px;
-
 }
+
+@media (max-width: 1280px) {
+    .container {
+        width: 90%;
+    }
+
+    #titles-container {
+        font-size: 70%;
+    }
+
+    #github {
+        display: none;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pdf {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
