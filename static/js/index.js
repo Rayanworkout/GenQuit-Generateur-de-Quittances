@@ -4,16 +4,16 @@
 // Function to split address in case it is too long
 function splitAddress(address) {
     if (address.length > 25) {
-      const addressArray = address.split('');
-      const firstHalf = addressArray.slice(0, 25).join('');
-      const secondHalf = addressArray.slice(25).join('');
-  
-      return `${firstHalf}\n${secondHalf}`;
+        const addressArray = address.split('');
+        const firstHalf = addressArray.slice(0, 25).join('');
+        const secondHalf = addressArray.slice(25).join('');
+
+        return `${firstHalf}\n${secondHalf}`;
     } else {
-      return address;
+        return address;
     }
-  
-  }
+
+}
 
 // Fonction to get today's date
 
@@ -55,10 +55,10 @@ function getMonthAndYear(dateObject) {
         return `d'${fullMonth} ${year}`
     } else {
         return `de ${fullMonth} ${year}`
-    
+
     }
 
-    
+
 }
 
 
@@ -89,6 +89,28 @@ dateFields.forEach((element, index) =>
         }
     }
     ));
+
+
+// Adding the download button when preview box is not visible under 768px
+
+const screenWidth = window.innerWidth;
+
+if (screenWidth < 768) {
+    const btnContainer = document.querySelector('#form-container');
+
+    const downloadBtnDiv = document.createElement('div');
+    downloadBtnDiv.classList.add('btn-container');
+
+    const downloadBtn = document.createElement('button');
+    downloadBtn.classList.add('btn', 'my-btn', 'download-btn');
+    downloadBtn.textContent = "Télécharger";
+
+    downloadBtnDiv.appendChild(downloadBtn);
+
+    btnContainer.appendChild(downloadBtnDiv);
+
+}
+
 
 ////////////////// PREVIEW //////////////////////////
 

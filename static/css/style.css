@@ -305,3 +305,30 @@ h2 {
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .preview-box {
+        display: none;
+    }
+
+    #titles-container {
+        font-size: 70%;
+    }
+
+    .git-link {
+        display: none;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pdf {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
