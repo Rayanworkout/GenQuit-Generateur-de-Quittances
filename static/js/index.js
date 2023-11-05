@@ -1,6 +1,10 @@
 
 ////////////////// FUNCTIONS //////////////////////
 
+
+// TODO CHECK DATE + LINE BREAK FOR ADDRESSES + MOIS AVEC APOSTROPHE d'avril
+
+
 // Fonction to get today's date
 
 function getDate() {

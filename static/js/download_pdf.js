@@ -24,13 +24,11 @@ function createQuittance(proprioName,
 
     doc.text(proprioName, 10, 13);
 
-    // RETOUR À LA LIGNE !
     doc.text(proprioAddress, 10, 20);
 
 
     doc.text(locataireName, 130, 13);
 
-    // IDEM
     doc.text(locataireAddress, 130, 20);
 
     doc.line(10, 30, 100, 30);
@@ -66,10 +64,10 @@ function createQuittance(proprioName,
     doc.text('Signature du propriétaire _______________', 10, 280);
 
     doc.setFontSize(10)
-    doc.text('Made with GenQuit', 176, 295);
+    doc.text('Made with GenQuit', 178, 295);
 
 
-    const outputFilename = `quittance-${month.replace(/ /g, '-')}.pdf`;
+    const outputFilename = `Quittance-${month.replace(/ /g, '-')}-${locataireName.replace(/ /g, '-')}.pdf`;
     doc.save(outputFilename);
 
     return true;
