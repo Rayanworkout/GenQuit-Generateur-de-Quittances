@@ -2,23 +2,22 @@
 ////////////////// FUNCTIONS //////////////////////
 
 
-// TODO CHECK DATE + LINE BREAK FOR ADDRESSES + MOIS AVEC APOSTROPHE d'avril
+// MOIS AVEC APOSTROPHE d'avril + ADD COMMENTS
+// + ADD TO README
 
 
 // Fonction to get today's date
 
 function getDate() {
     const today = new Date();
-    const day = today.getDay();
-    const month = today.getMonth();
+    const day = today.getDate();
+    const month = today.getMonth() + 1;
     const year = today.getFullYear()
 
     const formattedToday = `${day}/${month}/${year}`
 
     return formattedToday
 }
-
-console.log(getDate())
 
 // Monitoring when download button is clicked
 const downloadBtn = document.querySelector('.download-btn')
@@ -86,7 +85,15 @@ function getMonthAndYear(dateObject) {
     const month = dateObject.getMonth();
     const fullMonth = months[month]
     const year = dateObject.getFullYear()
-    return `${fullMonth} ${year}`
+
+    if ([3, 7, 9].includes(month)) {
+        return `d'${fullMonth} ${year}`
+    } else {
+        return `de ${fullMonth} ${year}`
+    
+    }
+
+    
 }
 
 
