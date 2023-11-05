@@ -23,89 +23,74 @@
 
 <body id="body">
     <nav class="navbar navbar-light my-navbar justify-content-between">
-        <a class="navbar-brand" href="#" id="navbar-title"> GenQuit </a>
+        <a class="navbar-brand " href="#" id="navbar-title"> GenQuit </a>
         <div class="d-flex">
-            <a class="nav-link git-link" href="https://github.com/Rayanworkout/GenQuit-Generateur-de-Quittances" target="_blank"
-                id="github">Github
+            <a class="nav-link git-link" href="https://github.com/Rayanworkout/GenQuit-Generateur-de-Quittances"
+                target="_blank" id="github">Github
                 <img src="static/img/github-logo.png" width="30" height="30" class="d-inline-block" alt="" /></a>
         </div>
     </nav>
-    <div class="container col-8" id="titles-container">
+    <div class="container col-12 titles-container">
         <h1 id="page-header">Créez facilement vos quittances de loyer !</h1>
-        <h3>Pas d'inscription, pas de pub, <a
-                href="https://github.com/Rayanworkout/GenQuit-Generateur-de-Quittances" class="open-source-link" target="_blank">open source.</a></h3>
     </div>
-    <div class="container col-11 text-center main-container">
+    <div class="container col-12 titles-container">
+        <h3 class="second-header">Pas d'inscription, pas de pub, <a
+                href="https://github.com/Rayanworkout/GenQuit-Generateur-de-Quittances" class="open-source-link"
+                target="_blank">open source.</a></h3>
+    </div>
+    <div class="container col-12 text-center main-container">
         <div class="row">
-            <div class="col-md-4" id="form-container">
+            <div class="col-md-4 form-box pdf" id="form-container">
                 <form>
-                    <div class="input-frame">
-                        <div class="row">
-                            <div class="form-group mx-auto my-form">
-                                <label for="proprio-name"></label>
-                                <h2>Bailleur</h2>
-                                <input type="text" class="form-control my-input" id="proprio-name"
-                                    placeholder="Nom et Prénom" />
-                            </div>
-                            <div class="form-group mx-auto my-form">
-                                <label for="proprio-address"></label>
-                                <input type="text" class="form-control my-input" id="proprio-address"
-                                    placeholder="Adresse" />
-                            </div>
-                        </div>
+                    <div class="form-group mx-auto my-form">
+                        <label for="proprio-name"></label>
+                        <h2>Bailleur</h2>
+                        <input type="text" class="form-control my-input" id="proprio-name"
+                            placeholder="Nom et Prénom" />
                     </div>
-                    <div class="input-frame">
-                        <div class="row">
-                            <div class="form-group mx-auto my-form">
-                                <label for="locataire-name"></label>
-                                <h2>Locataire</h2>
-                                <input type="text" class="form-control my-input" id="locataire-name"
-                                    placeholder="Nom et Prénom" />
-                            </div>
-                            <div class="form-group mx-auto my-form">
-                                <label for="locataire-address"></label>
-                                <input type="text" class="form-control my-input" id="locataire-address"
-                                    placeholder="Adresse du bien en location" />
-                            </div>
-                        </div>
+                    <div class="form-group mx-auto my-form">
+                        <label for="proprio-address"></label>
+                        <input type="text" class="form-control my-input" id="proprio-address" placeholder="Adresse" />
                     </div>
-                    <div class="input-frame">
-                        <div class="row">
-                            <div class="form-group mx-auto my-form">
-                                <h2 style="margin-bottom: 10px">Dates</h2>
-                                <label for="date-from" class="date-label">Du</label>
-                                <input type="text" class="form-control my-input date-picker" id="date-from"
-                                    placeholder="dd/mm/yyyy" />
-                                <label for="date-to" class="date-label">Au</label>
-                                <input type="text" class="form-control my-input date-picker" id="date-to"
-                                    placeholder="dd/mm/yyyy" />
-                            </div>
-                        </div>
+                    <div class="form-group mx-auto my-form">
+                        <label for="locataire-name"></label>
+                        <h2>Locataire</h2>
+                        <input type="text" class="form-control my-input" id="locataire-name"
+                            placeholder="Nom et Prénom" />
                     </div>
-                    <div class="input-frame">
-                        <div class="row">
-                            <div class="form-group mx-auto my-form">
-                                <h2>Montants</h2>
-                                <input type="number" class="form-control my-input" id="loyer-ht-input"
-                                    placeholder="Loyer Hors Charges" />
-                            </div>
-                            <div class="form-group mx-auto my-form">
-                                <label for="charges-input"></label>
-                                <input type="number" class="form-control my-input" id="charges-input"
-                                    placeholder="Charges" />
-                            </div>
-                            <div class="form-group mx-auto my-form">
-                                <p class="form-control my-input total-input" id="total-input">
-                                    Total
-                                </p>
-                            </div>
-                        </div>
+                    <div class="form-group mx-auto my-form">
+                        <label for="locataire-address"></label>
+                        <input type="text" class="form-control my-input" id="locataire-address"
+                            placeholder="Adresse du bien en location" />
+                    </div>
+                    <div class="form-group mx-auto my-form">
+                        <h2 style="margin-bottom: 10px">Dates</h2>
+                        <label for="date-from" class="date-label">Du</label>
+                        <input type="text" class="form-control my-input date-picker" id="date-from"
+                            placeholder="dd/mm/yyyy" />
+                        <label for="date-to" class="date-label">Au</label>
+                        <input type="text" class="form-control my-input date-picker" id="date-to"
+                            placeholder="dd/mm/yyyy" />
+                    </div>
+                    <div class="form-group mx-auto my-form">
+                        <h2>Montants</h2>
+                        <input type="number" class="form-control my-input" id="loyer-ht-input"
+                            placeholder="Loyer Hors Charges" />
+                    </div>
+                    <div class="form-group mx-auto my-form">
+                        <label for="charges-input"></label>
+                        <input type="number" class="form-control my-input" id="charges-input" placeholder="Charges" />
+                    </div>
+                    <div class="form-group mx-auto my-form">
+                        <p class="form-control my-input total-input" id="total-input">
+                            Total
+                        </p>
                     </div>
                 </form>
             </div>
-            <div class="col-md-6 preview-box pdf" id="preview-container">
+            <div class="col-md-6 preview-box pdf">
                 <h3>Prévisualisation</h3>
-                <button class="btn my-btn download-btn">Télécharger</button>
+
                 <div class="container preview">
                     <div class="row">
                         <div class="col">
@@ -159,6 +144,8 @@
                             <p class="total price-elem">
                                 <span class="total-tag">Total</span><span id="total"></span> €
                             </p>
+                            <div class="btn-container"><button class="btn my-btn download-btn">Télécharger</button></div>
+                            
                         </div>
                     </div>
                 </div>
