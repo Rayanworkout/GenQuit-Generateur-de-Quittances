@@ -1,6 +1,6 @@
 # GenQuit, générateur de quittance de loyer.
 
-visible sur: http://35.181.53.90/
+Visible sur: http://35.181.53.90/
 
 Créez une quittance de loyer en un clic avec une interface agréable.
 
