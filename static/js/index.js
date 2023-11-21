@@ -1,6 +1,17 @@
 
 ////////////////// FUNCTIONS //////////////////////
 
+// Initializing autocomplete for address fields
+
+const proprioAddress = document.querySelector('#proprio-address');
+const locataireAddress = document.querySelector('#locataire-address');
+
+
+initFrenchAutocomplete(proprioAddress);
+initFrenchAutocomplete(locataireAddress);
+
+
+
 // Function to split address in case it is too long
 function splitAddress(address) {
     if (address.length > 25) {
@@ -109,7 +120,7 @@ if (screenWidth < 768) {
 
     btnContainer.appendChild(downloadBtnDiv);
 
-}
+};
 
 
 ////////////////// PREVIEW //////////////////////////
