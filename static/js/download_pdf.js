@@ -34,7 +34,7 @@ function createQuittance(proprioName,
     doc.line(10, 30, 100, 30);
 
     doc.setFontSize(24).setFont(undefined, 'bold');
-    doc.text(`Quittance de ${month}`, 105, 80, { align: 'center' }).setFont(undefined, 'normal');
+    doc.text(`Quittance ${month}`, 105, 80, { align: 'center' }).setFont(undefined, 'normal');
 
 
     doc.setFontSize(14);

@@ -1,9 +1,12 @@
 :root {
-    --main-color: #1DA1F2;
-    --main-bg-color: #e8ecf1;
-    --preview-color: #839bfc;
+    --main-color: #6868ce;
+    --main-bg-color: #fdfdfc;
     --text-color: #242424;
-    --secondary-text-color: #666666;
+}
+
+
+* {
+    font-family: 'Poppins', sans-serif;
 }
 
 .my-navbar {
@@ -19,7 +22,10 @@
 }
 
 #navbar-title:hover {
-    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 5px;
     
 }
 
@@ -28,6 +34,9 @@
     color: var(--main-color);
 }
 
+.open-source-link:hover {
+    color: var(--text-color);
+}
 
 .git-link {
     color: black;
@@ -38,7 +47,6 @@
 }
 
 .git-link:hover {
-    color: #ffffff;
     cursor: pointer;
 }
 
@@ -65,7 +73,7 @@ h1 {
 
 h3.second-header {
     margin-bottom: 100px;
-    color: var(--secondary-text-color);
+    color: var(--text-color);
     font-size: 2em;
 }
 

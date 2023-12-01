@@ -14,17 +14,29 @@ initFrenchAutocomplete(locataireAddress);
 
 // Function to split address in case it is too long
 function splitAddress(address) {
-    if (address.length > 25) {
-        const addressArray = address.split('');
-        const firstHalf = addressArray.slice(0, 25).join('');
-        const secondHalf = addressArray.slice(25).join('');
+    if (typeof address !== 'string') {
+        throw new Error('Address should be a string');
+    }
 
-        return `${firstHalf}\n${secondHalf}`;
+    const maxLength = 25;
+    if (address.length > maxLength) {
+        const firstHalf = address.substring(0, maxLength);
+        const indexOfLastSpace = firstHalf.lastIndexOf(' ');
+
+        let splitIndex = maxLength;
+        if (indexOfLastSpace !== -1) {
+            splitIndex = indexOfLastSpace;
+        }
+
+        const firstPart = address.substring(0, splitIndex);
+        const secondPart = address.substring(splitIndex).trim();
+
+        return `${firstPart}\n${secondPart}`;
     } else {
         return address;
     }
-
 }
+
 
 // Fonction to get today's date
 
